@@ -90,6 +90,17 @@ Expected Server Response: HTTP 200 OK
 If 1 of the mandatory data is missing: HTTP 403 Forbidden
 If 1 of the provided data is not matching the expected data: HTTP 401 Unauthorized
 
+#Server Process
+
+curl \
+-X GET /apiv15/client&clientid{client}&password{ci_password}&sessionid=sessionid
+-X GET /apiv15/database/client?isClient=1
+-X POST /apiv15/database/client?isAuthorized=1
+-X POST /apiv15/client/authorized=1
+returns HTTP /1.1 200 OK
+
+
+
                 </code></pre>
             <p>
                To test the API, you need to provide all of the mandatory data (username, password, license key and API key) :<br>
@@ -105,7 +116,7 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
             <table class="central-overflow-x">
                 <thead>
                 <tr>
-                    <th>Field</th>
+                    <th>Data to provide</th>
                     <th>Type</th>
                     <th>Description</th>
                 </tr>
@@ -113,17 +124,17 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
                 <tbody>
                 <tr>
                     <td>username</td>
-                    <td>String</td>
+                    <td>POST</td>
                     <td>Your username</td>
                 </tr>
                 <tr>
                     <td>password</td>
-                    <td>String</td>
+                    <td>POST</td>
                     <td>Your password</td>
                 </tr>
                 <tr>
                     <td>license</td>
-                    <td>String</td>
+                    <td>POST</td>
                     <td>
                         Your license key
                     
@@ -131,7 +142,7 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
                 </tr>
                 <tr>
                     <td>apikey</td>
-                    <td>String</td>
+                    <td>POST</td>
                     <td>
                         Your API key
                     </td>
@@ -152,7 +163,7 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
     <table class="central-overflow-x">
         <thead>
         <tr>
-            <th>Field</th>
+            <th>Data to provide</th>
             <th>Type</th>
             <th>Description</th>
         </tr>
@@ -160,17 +171,17 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
         <tbody>
         <tr>
             <td>username</td>
-            <td>String</td>
+            <td>POST</td>
             <td>Your username</td>
         </tr>
         <tr>
             <td>password</td>
-            <td>String</td>
+            <td>POST</td>
             <td>Your password</td>
         </tr>
         <tr>
             <td>license</td>
-            <td>String</td>
+            <td>POST</td>
             <td>
                 Your license key
             
@@ -178,7 +189,7 @@ If 1 of the provided data is not matching the expected data: HTTP 401 Unauthoriz
         </tr>
         <tr>
             <td>apikey</td>
-            <td>String</td>
+            <td>POST</td>
             <td>
                 Your API key
             </td>
